@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Agdasima:wght@400;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root{
+    
+    --col__50: #e9f1ff;
+    --col__100:#d8e3ff;
+    --col__200:#b8cbff;
+    --col__300:#8ea8ff;
+    --col__400:#6177ff;
+    --col__500:#3d48ff;
+    --col__600:#221cff;
+    --col__700:#1b11f1;
+    --col__800:#1711c2;
+    --col__900:#191897;
+    --col__950:#070625;
+    --font__title:"Agdasima", sans-serif;
+    
+    --col__900x:#18189769;
+    
+}
+
+body{
+    color: var(--col__200);
+    background-color: var(--col__950);
+    background-image: url("./images/background-stars.svg");
+}
+/* margen */
+.container{
+    width: 90%;
+    margin: 0 auto;
+}
+/* header */
+.nav{
+    height: 60px;
+    max-width: 1024px;
+    margin: 0 auto;
+    --url-menu:url("./images/hanburger.svg");
+    --opacity-menu:0;
+    --transform-menu:translate(-120%);
+    --pointer-menu:none;
+}
+nav:has( :checked){
+    --url-menu:url("./images/close.svg");
+    --opacity-menu:1;
+    --transform-menu:translate(0) ;
+    --pointer-menu:unset;
+}
+.header__nav{
+    /* outline: 1px red solid; */
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header__nav__txt{
+    font-family: var(--font__title);
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    color: var(--col__50);
+}
+.header__nav__list{
+    /* outline: 1px red solid; */
+    position: absolute;
+
+    top: 80px;
+    inset-inline: 0;
+    padding: 30px 5%; 
+    background-color: var(--col__900x);
+
+    pointer-events:var(--pointer-menu);
+    opacity: var(--opacity-menu);
+    transform: var(--transform-menu);
+    transition: .8s opacity, transform .8s;
+}
+.header__list{
+    
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.4rem;
+}
+.list__item__a{
+    color: var(--col__100);
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-family: 'Segoe UI';
+    text-transform: uppercase;
+}
+.list__item__a:hover{
+    text-decoration: underline;
+    color: var(--col__400);
+}
+.nav_label{
+    display: block;
+    width: 40px;
+    height: 40px;
+    background-image: var(--url-menu);
+    background-size: contain;
+    background-position: center;
+    cursor: pointer;
+    transition: background-image .4s;
+}
+[id="menu"]{
+    display: none;
+}
+.hr{
+    border: .1px solid rgba(255, 255, 255, 0.199);
+}
+
+@media screen and (width > 767px ) {
+     /* navegacion */
+    .nav{
+        height: 140px;
+        --opacity-menu:1;
+        --transform-menu:translate(0) ;
+        --pointer-menu:unset;
+}
+    .header__nav{
+        flex-direction: column;
+        justify-content:space-evenly;
+        align-items: center;
+    }
+    .header__nav__logo{
+        margin: auto 0;
+    }
+    .header__nav__txt{
+        font-size: 2rem;
+    }
+    .nav_label{
+        display: none;
+    }
+    .header__nav__list{
+        
+        position: relative;
+        top: unset;
+        inset-inline: unset;
+       
+        width: 90%;
+        padding:30px 0; 
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: unset;
+        
+    
+}
+    .header__list{
+        width: 100%;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        gap: .5rem;
+    }
+    .list__item__a{
+        color: var(--col__100);
+        text-decoration: none;
+        font-size: 1rem;
+        text-transform: uppercase;
+    }
+}
+
+
+@media screen and (width > 1023px ) {
+    /* navegacion */
+    .nav{
+        /* outline: auto; */
+        height: 90px;
+    }
+    .header__nav{
+        flex-direction: row;
+        justify-content:space-between;
+        align-items: center;    
+    }
+    .header__nav__list{
+        width: 70%;
+        justify-content: end;
+    }
+    .header__list{
+        justify-content: end;
+        gap: .8rem;
+    }
+    
+   
+   
+}
+
