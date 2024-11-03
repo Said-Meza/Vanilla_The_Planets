@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../assets/style.css" />
+    <link
+      rel="shortcut icon"
+      href="../assets/images/pokebal.png"
+      type="image/x-icon"
+    />
+    <title>The Planets</title>
+  </head>
+  <body>
+    <header class="header container">
+      <nav class="header__nav nav">
+        <div class="header__nav__logo">
+          <h4 class="header__nav__txt">the planets</h4>
+        </div>
+
+        <div class="header__nav__list">
+          <ul class="header__list">
+            <li class="list__item">
+              <a class="list__item__a" href="mercury.html">mercury</a>
+            </li>
+            <li class="list__item">
+              <a class="list__item__a" href="venus.html">venus</a>
+            </li>
+            <li class="list__item">
+              <a class="list__item__a" href="earth.html">earth</a>
+            </li>
+            <li class="list__item">
+              <a class="list__item__a" href="mars.html">mars</a>
+            </li>
+            <li class="list__item">
+              <a class="list__item__a" href="jupiter.html">jupiter</a>
+            </li>
+            <li class="list__item">
+              <a class="list__item__a" href="saturn.html">saturn</a>
+            </li>
+            <li class="list__item">
+              <a class="list__item__a" href="uranus.html">uranus</a>
+            </li>
+            <li class="list__item">
+              <a class="list__item__a" href="neptune.html">neptune</a>
+            </li>
+          </ul>
+        </div>
+
+        <label class="nav_label" for="menu">
+          <input class="check__input" type="checkbox" name="check" id="menu" />
+        </label>
+      </nav>
+    </header>
+
+    <hr class="hr hr__1" />
+
+    <main class="main">
+      <section class="main__grid">
+        <section class="main__menu container container__reverse_1">
+          <section class="main__menu__container">
+            <a class="menu__a" href="#" data-menu="overview" id="btn_overview"
+              ><spam class="menu__a__spam">01</spam> overview</a
+            >
+            <a class="menu__a" href="#" data-menu="structure" id="btn_structure"
+              ><spam class="menu__a__spam">02</spam> structure</a
+            >
+            <a class="menu__a" href="#" data-menu="surface" id="btn_surface"
+              ><spam class="menu__a__spam">03</spam> surface</a
+            >
+          </section>
+        </section>
+
+        <hr class="hr hr__2" />
+
+        <figure class="main__figure container">
+          <img
+            id="img1"
+            class="main__img"
+            src="../assets/images/planet-earth.svg"
+            alt="Planet"
+          />
+          <img
+            id="img2"
+            class="main__img main__img_1"
+            src="../assets/images/planet-earth-internal.svg"
+            alt="Planet_internal"
+          />
+          <img
+            id="img3"
+            class="main__img_2"
+            src="../assets/images/planet-earth-geology.png"
+            alt="geology"
+          />
+        </figure>
+
+        <section class="main__texts container container__reverse_2">
+          <h4 id="title" class="main__texts__title">Earth</h4>
+          <p id="paragraph1" class="main__texts__paragrafp">
+            Third planet from the Sun and the only known planet to harbor life.
+            About 29.2% of Earth's surface is land with remaining 70.8% is
+            covered with water. Earth's distance from the Sun, physical
+            properties and geological history have allowed life to evolve and
+            thrive.
+          </p>
+          <p
+            id="paragraph2"
+            class="main__texts__paragrafp main__texts__paragrafp__2"
+          >
+            Earth's interior, like that of the other terrestrial planets, is
+            divided into layers by their chemical or physical (rheological)
+            properties. The outer layer is a chemically distinct silicate solid
+            crust, which is underlain by a highly viscous solid mantle.
+          </p>
+          <p
+            id="paragraph3"
+            class="main__texts__paragrafp main__texts__paragrafp__3"
+          >
+            The total surface area of Earth is about 510 million km2. The
+            continental crust consists of lower density material such as the
+            igneous rocks granite and andesite. Less common is basalt, a denser
+            volcanic rock that is the primary constituent of the ocean floors.
+          </p>
+          <a
+            id="wiki"
+            target="_blank"
+            href="https://en.wikipedia.org/wiki/Earth"
+            class="main__texts__sources"
+            >Source:
+            <spam class="spam__wiki"> wikipedia</spam>
+            <spam>🔽</spam>
+          </a>
+          <a
+            id="wiki2"
+            target="_blank"
+            href="#"
+            class="main__texts__sources main__texts__sources__2"
+            >Source:
+            <spam class="spam__wiki"> wikipedia</spam>
+            <spam>🔽</spam>
+          </a>
+          <a
+            id="wiki3"
+            target="_blank"
+            href="#"
+            class="main__texts__sources main__texts__sources__3"
+            >Source:
+            <spam class="spam__wiki"> wikipedia</spam>
+            <spam>🔽</spam>
+          </a>
+        </section>
+
+        <section class="main__data container container__modifiquer">
+          <section class="main__data__container">
+            <h2 class="main__data__title">rotation time</h2>
+            <h1 id="rotation" class="main__data__data">0.99 days</h1>
+          </section>
+
+          <section class="main__data__container">
+            <h2 class="main__data__title">revolution time</h2>
+            <h1 id="revolution" class="main__data__data">365.26 days</h1>
+          </section>
+
+          <section class="main__data__container">
+            <h2 class="main__data__title">radius</h2>
+            <h1 id="radius" class="main__data__data">6.371 KM</h1>
+          </section>
+
+          <section class="main__data__container">
+            <h2 class="main__data__title">average temp.</h2>
+            <h1 id="temp" class="main__data__data">16°c</h1>
+          </section>
+        </section>
+      </section>
+    </main>
+
+    <script type="module" src="../assets/app.js"></script>
+  </body>
+</html>

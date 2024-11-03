@@ -22,7 +22,7 @@
     --font__menu:"Verdana", Geneva, Tahoma, sans-serif;
     
     --col__900x:#000041;
-    --col__300x:#a9b3d370;
+    --col__300x:#a9b3d3fb;
     --col__hr:#ffffff33;
     
 }
@@ -143,6 +143,7 @@ nav:has( :checked){
     text-decoration: none;
     color: var(--col__400);
     text-transform: uppercase;
+    padding: 1rem 0;
 }
 .menu__a:hover{
     color: var(--col__50);
@@ -197,10 +198,22 @@ nav:has( :checked){
     font-family: var(--font__menu);
     line-height: 1.7rem;
 }
+.main__texts__paragrafp__2{
+    display: none;
+}
+.main__texts__paragrafp__3{
+    display: none;
+}
 .main__texts__sources{
     text-decoration: none;
     font-family: var(--font__menu);
     color: var(--col__300x);
+}
+.main__texts__sources__2{
+    display: none;
+}
+.main__texts__sources__3{
+    display: none;
 }
 .main__texts__sources:hover{
     color: var(--col__50);
@@ -238,6 +251,12 @@ nav:has( :checked){
     font-family: var(--font__title);
     color: var(--col__50);
     text-transform: uppercase;
+}
+
+.active{
+    
+    border-bottom: 4px solid var(--col__600);   
+    
 }
 
 
@@ -301,10 +320,7 @@ nav:has( :checked){
         text-decoration: unset;
 
     }
-    .active{
-        border-bottom: 4px solid red;   
-        
-    }
+   
     /* main */
 
     .main__grid{
