@@ -18,7 +18,39 @@ const $btn_overview =document.getElementById("btn_overview"),
     $temp=document.getElementById("temp"),
     $title=document.getElementById("title");
 
+   
+    apistart();
+
+
+    window.addEventListener("hashchange",apistart);
     
+    function apistart(){
+        const {hash}=location,
+        param = hash.substring(1)
+       const [key,value] = param.split("=");
+        
+        fetch("../db.json")
+        .then(data=>data.ok?data.json():Promise.reject({msg:"hubo un error",code:"404"}))
+        .then(json=>{
+            let start = json[value];
+            $title.textContent=start.name;
+            $img1.src=start.images.planet;
+            $img2.src=start.images.internal;
+            $img3.src=start.images.geology;
+            $paragraph1.textContent=start.overview.content;
+            $paragraph2.textContent=start.structure.content;
+            $paragraph3.textContent=start.geology.content;
+            $wiki1.href=start.overview.source;
+            $wiki2.href=start.structure.source;
+            $wiki3.href=start.geology.source;
+            $rotation.textContent=start.rotation;
+            $revolution.textContent=start.revolution;
+            $radius.textContent=start.radius;
+            $temp.textContent=start.temperature;
+            console.log(json[value])
+        })
+        .catch(err=>console.log(err))
+    }
 
 document.addEventListener("click",(e)=>{
     
